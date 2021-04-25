@@ -1,0 +1,11 @@
+[package]
+name = "fractal-rs"
+version = "0.2.0"
+authors = ["Brandon Grooters <brandon.grooters@bytetrail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num = "0.3"
+
