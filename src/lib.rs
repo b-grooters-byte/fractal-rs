@@ -117,10 +117,7 @@ impl Mandelbrot {
     pub fn render(&mut self) -> Vec<u8> {
         let mut image = Vec::with_capacity((self.config.width * self.config.height * 4) as usize);
         let mut image_iter = Vec::with_capacity((self.config.width * self.config.height) as usize);
-        // prepare the histogram
-        for _ in 0..self.config.iter as usize {
-            self.hist.push(0);
-        }
+        self.hist = vec![0; self.config.iter as usize];
         let x_step = (self.viewport.1.re - self.viewport.0.re).abs() / self.config.width as f64;
         let y_step = (self.viewport.0.im - self.viewport.1.im).abs() / self.config.height as f64;
         // pass 1 - populate the raw pixel values and histogram
