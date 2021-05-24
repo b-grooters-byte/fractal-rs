@@ -45,7 +45,8 @@ pub fn hsl_rgb(hue: f32, sat: f32, lum: f32) -> (u8, u8, u8) {
         }
     }
     (
-        ((rgb_prime.0 + m) * 255.0) as u8,        ((rgb_prime.1 + m) * 255.0) as u8,
+        ((rgb_prime.0 + m) * 255.0) as u8,        
+        ((rgb_prime.1 + m) * 255.0) as u8,
         ((rgb_prime.2 + m) * 255.0) as u8,
     )
 }
